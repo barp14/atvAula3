@@ -1,0 +1,35 @@
+curl --location 'localhost:3000/produtos/' \
+--data ''
+
+curl --location 'localhost:3000/produtos/' \
+--header 'Content-Type: application/json' \
+--data '{
+        "nome": "Novo produto criado via POST",
+        "fornecedor": "Fornecedor do Novo produto criado via POST",
+        "endereco_fornecedor": "Endereço do Fornecedor do Novo produto criado via POST",
+        "quantidade": 2000,
+        "endereco": "Endereço do Novo produto criado via POST",
+        "preco_unitario": 999.0
+    }'
+
+curl --location --request PUT 'localhost:3000/produtos/6' \
+--header 'Content-Type: application/json' \
+--data '{
+        "nome": "Novo produto criado via POST - EDITADO -",
+        "fornecedor": "Fornecedor do Novo produto criado via POST - EDITADO -",
+        "endereco_fornecedor": "Endereço do Fornecedor do Novo produto criado via POST - EDITADO -",
+        "quantidade": 4000,
+        "endereco": "Endereço do Novo produto criado via POST - EDITADO -",
+        "preco_unitario": 666.0
+    }'
+
+curl --location --request DELETE 'localhost:3000/produtos/6' \
+--header 'Content-Type: application/json' \
+--data '{
+        "nome": "Novo produto criado via POST - EDITADO -",
+        "fornecedor": "Fornecedor do Novo produto criado via POST - EDITADO -",
+        "endereco_fornecedor": "Endereço do Fornecedor do Novo produto criado via POST - EDITADO -",
+        "quantidade": 4000,
+        "endereco": "Endereço do Novo produto criado via POST - EDITADO -",
+        "preco_unitario": 666.0
+    }'
